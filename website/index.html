@@ -32,13 +32,8 @@
                 var randomIndex = Math.floor(Math.random() * images.length);
                 var imageUrl = images[randomIndex];
 
-                // 设置页面背景
-                document.body.style.backgroundImage = 'url(' + imageUrl + ')';
-
-                // 点击页面时跳转到图片链接
-                document.body.onclick = function () {
-                    window.location.href = imageUrl;
-                };
+                // 页面加载时跳转到图片链接
+                window.location.href = imageUrl;
             })
             .catch(error => console.error('Error fetching images.json:', error));
     </script>
